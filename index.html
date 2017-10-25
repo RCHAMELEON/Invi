@@ -76,7 +76,7 @@
                         </div>
                         <section class="sale-basket">
                             <div class="sale">
-                                <span class="head-icon head-icon_sale"></span>
+                                <span class="head-icon head-icon_sale"><span class="sale__count">10</span></span>
                                 <span class="">Акции и скидки</span>
                             </div>
                             <div class="basket">
@@ -120,6 +120,8 @@
                           <div class="sidebar-basket__item">В корзине 5 товаров</div>
                           <a href="#" class="sidebar-basket__item sidebar-basket__item_link">Оформить заказ</a>
                     </div>
+                </div>
+                <div onclick="hideMenu();" class="slidebar-close clearfix">
                 </div>
             </section>
             <nav>
@@ -184,21 +186,27 @@
         <section class="sub-slider clearfix">
             <div class="sub-slider-block">
                 <a class="sub-slider-block-link clearfix">
-                    <div class="sub-slider-block__ico"></div>
+                    <div class="sub-slider-block__ico">
+                        <i class="sub-slider-block__ico-item" style="background: url(img/one-pos.png);"></i>
+                    </div>
                     <div class="sub-slider-block__title">Помощь<br>в подборе товара</div>
                     <span class="sub-slider-block__transit">Помогите мне с выбором</span>
                 </a>
             </div>
             <div class="sub-slider-block">
                 <a class="sub-slider-block-link clearfix">
-                    <div class="sub-slider-block__ico"></div>
+                    <div class="sub-slider-block__ico">
+                        <i class="sub-slider-block__ico-item sub-slider-block__ico-item_avg" style="background: url(img/cook-avg.png);"></i>
+                    </div>
                     <div class="sub-slider-block__title">Продукция для<br>профессионалов</div>
                     <span class="sub-slider-block__transit">Перейти в каталог</span>
                 </a>
             </div>
             <div class="sub-slider-block">
                 <a class="sub-slider-block-link clearfix">
-                    <div class="sub-slider-block__ico"></div>
+                    <div class="sub-slider-block__ico">
+                        <i class="sub-slider-block__ico-item sub-slider-block__ico-item_last" style="background: url(img/divel.png);"></i>
+                    </div>
                     <div class="sub-slider-block__title">Доставка товара<br>по всей россии</div>
                     <span class="sub-slider-block__transit">Посмотреть условия доставки</span>
                 </a>
@@ -358,11 +366,11 @@
                 <li class="navigator__item navigator__item_active"><span>Распродажа</span></li>
         </ul>
         <section class="product-sliders product-sliders_tovar clearfix">
+            <div class="slider-navigation">
+                <div class="slider-navigation__item slider-navigation__item_prev"><i class="arrow"></i></div>
+                <div class="slider-navigation__item slider-navigation__item_next"><i class="arrow"></i></div>
+            </div>
             <article class="product-slide product-slide_pos1">
-                <div class="slider-navigation">
-                    <div class="slider-navigation__item slider-navigation__item_prev"><i class="arrow"></i></div>
-                    <div class="slider-navigation__item slider-navigation__item_next"><i class="arrow"></i></div>
-                </div>
                 <figure class="product-slide-img">
                     <div class="cyrcle-middle cyrcle-middle_sale"><span>5%</span></div>
                     <img src="img/forma.png" class="product-slide__img">
@@ -375,10 +383,6 @@
                 <button class="button button_red">В корзину</button>
             </article>
             <article class="product-slide product-slide_pos2">
-                <div class="slider-navigation">
-                    <div class="slider-navigation__item slider-navigation__item_prev"><i class="arrow"></i></div>
-                    <div class="slider-navigation__item slider-navigation__item_next"><i class="arrow"></i></div>
-                </div>
                 <figure class="product-slide-img">
                     <div class="cyrcle-middle cyrcle-middle_sale"><span>15%</span></div>
                     <img src="img/prott.png" class="product-slide__img">
@@ -391,10 +395,6 @@
                 <button class="button button_red">В корзину</button>
             </article>
             <article class="product-slide product-slide_pos3">
-                <div class="slider-navigation">
-                    <div class="slider-navigation__item slider-navigation__item_prev"><i class="arrow"></i></div>
-                    <div class="slider-navigation__item slider-navigation__item_next"><i class="arrow"></i></div>
-                </div>
                 <figure class="product-slide-img">
                     <div class="cyrcle-middle cyrcle-middle_sale"><span>5%</span></div>
                     <img src="img/formacake.png" class="product-slide__img">
@@ -408,10 +408,6 @@
                 <button class="button button_red">В корзину</button>
             </article>
             <article class="product-slide product-slide_pos4">
-                <div class="slider-navigation">
-                    <div class="slider-navigation__item slider-navigation__item_prev"><i class="arrow"></i></div>
-                    <div class="slider-navigation__item slider-navigation__item_next"><i class="arrow"></i></div>
-                </div>
                 <figure class="product-slide-img">
                     <div class="cyrcle-middle cyrcle-middle_sale"><span>5%</span></div>
                     <img src="img/prott.png" class="product-slide__img">
@@ -427,13 +423,15 @@
         <div class="container-link clearfix"><a href="#" class="list-product">Смотреть все</a></div>
     </section>
 
-    <section class="container" style="margin-top: 27px;">
+    <section class="container container_dsp">
         <section class="dispatch clearfix">
-            <div class="red-label"></div>
-            <h1 class="dispatch__title">Рассылка от ИНВИ</h1>
+            <div class="dispatch__head clearfix">
+                <div class="red-label"></div>
+                <h1 class="dispatch__title">Рассылка от ИНВИ</h1>
+            </div>
             <p class="dispatch__desc">Вступайте в клуб профессиональов ИНВИ! Получайте первыми предложения
-                <span class="fat-text">о новинках и распродажах!</span></p>
-            <input type="text" class="dispatch__input-text">
+                <b>о новинках и распродажах!</b></p>
+            <input type="text" placeholder="happy_customer@profit.ru" class="dispatch__input-text">
             <button class="button button_red" style="margin-top: 20px;">Подписаться</button>
         </section>
     </section>
@@ -504,16 +502,81 @@
                 </div>
                 <div class="clearfix"></div>
                 <section class="company-blocks clearfix">
-                    <div class="company-blocks__item"></div>
-                    <div class="company-blocks__item"></div>
-                    <div class="company-blocks__item"></div>
+                    <div class="company-blocks-item">
+                        <div class="company-blocks-item__head">Компания</div>
+                        <div class="company-blocks-item__sub clearfix">
+                            <div class="company-blocks-item__sub-head clearfix">
+                                <span class="company-number">10</span>
+                                <span class="company-number-desc">лет</span>
+                            </div>
+                            <div class="company-blocks-item__sub-desc clearfix">
+                                на рынке
+                            </div>
+                        </div>
+                        <div class="company-blocks-item__sub clearfix">
+                            <div class="company-blocks-item__sub-head clearfix">
+                                <span class="company-number company-number_margin">2</span>
+                                <span class="company-number-desc"><b>тыс.</b></span>
+                            </div>
+                            <div class="company-blocks-item__sub-desc clearfix">
+                                общая площадь <br>складов
+                            </div>
+                        </div>
+                    </div>
+                    <div class="company-blocks-item">
+                        <div class="company-blocks-item__head">Продукция</div>
+                        <div class="company-blocks-item__sub clearfix">
+                            <div class="company-blocks-item__sub-head clearfix">
+                                <span class="company-number">3</span>
+                                <span class="company-number-desc"><b>тыс.</b></span>
+                            </div>
+                            <div class="company-blocks-item__sub-desc company-blocks-item__sub-desc_padding clearfix">
+                                наименований <br>товара
+                            </div>
+                        </div>
+                        <div class="company-blocks-item__sub clearfix">
+                            <div class="company-blocks-item__sub-head clearfix">
+                                <span class="company-number company-number_margin">4</span>
+                                <span class="company-number-desc"><b>тыс.</b></span>
+                            </div>
+                            <div class="company-blocks-item__sub-desc clearfix">
+                                площадь завода <br>производителя
+                            </div>
+                        </div>
+                    </div>
+                    <div class="company-blocks-item">
+                        <div class="company-blocks-item__head">Опыт</div>
+                        <div class="company-blocks-item__sub clearfix">
+                            <div class="company-blocks-item__sub-head clearfix">
+                                <span class="company-number">40</span>
+                                <span class="company-number-desc"><b>тыс.</b></span>
+                            </div>
+                            <div class="company-blocks-item__sub-desc clearfix company-blocks-item__sub-desc_padding">
+                                клиентов в год
+                            </div>
+                        </div>
+                        <div class="company-blocks-item__sub clearfix">
+                            <div class="company-blocks-item__sub-head clearfix">
+                                <span class="company-number company-number_margin">15</span>
+                                <span class="company-number-desc"><b>млн.</b></span>
+                            </div>
+                            <div class="company-blocks-item__sub-desc clearfix">
+                               реализованной <br>продукции
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 </article>
+            <section class="company-target">
+                <div class="company-target__logo">Наша цель</div>
+                <div class="company-target__desc">
+                    Наш опыт работы подсказал нам, что зачастую, для коммерческого успеха пекарни, кондитерской или кафе нехватает качественного, профессионального кондитерского или пекарского инвентаря. который позволяет полностью реализовать задумку пекаря или кондитера. Мы придерживается того мнения, что с инвентарем должно быть приятно работать, инвентарь должен вдохновлять. <b>Именно такой инвентарь мы и предлагаем нашим клиентам!</b></div>
+            </section>
             <div class="detail-button"></div>
         </section>
     </section>
 
-    <section class="container container_btn">
+    <section class="container_btn">
         <section class="container-button">
             <button class="button button_red button_fat">8 (800) 555-35-35</button>
             <button class="button button_blue button_fat">Написать нам</button>
