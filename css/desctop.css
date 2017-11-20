@@ -1,17 +1,20 @@
 ﻿@font-face {
     font-family: DINPro;
-    src: local("DINPro"),
-    url(../fonts/DINPro-Regular_13937.ttf);
+    src: url(../fonts/DINPro-Regular_13937.ttf),
+    url('../fonts/DINPro-Regular_13937.eot?') format('eot'),
+    url('../fonts/DINPro-Regular.woff') format('woff');
 }
 @font-face {
     font-family: Into;
-    src: local("Into"),
-    url(../fonts/Intro-Regular.otf);
+    src: url(../fonts/Intro-Regular.otf),
+    url('../fonts/Intro-Regular.eot?') format('eot'),
+    url('../fonts/Intro-Regular.woff') format('woff');
 }
 @font-face {
-    font-family: DINPro Bold; 
-    src: local("DINPro Bold"), 
-    url(../fonts/DINPROBOLD.ttf); 
+    font-family: DINPro Bold;
+    src: url(../fonts/DINPROBOLD.ttf),
+    url('../fonts/DINPROBOLD.eot?') format('eot'),
+    url('../fonts/DINPro-Bold.woff') format('woff');
 }
 
 @media (min-width: 1200px) {
