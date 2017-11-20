@@ -1,22 +1,20 @@
 @font-face {
     font-family: DINPro;
-    src: local("DINPro"),
-    url(../fonts/DINPro-Regular_13937.ttf);
+    src: url(../fonts/DINPro-Regular_13937.ttf),
+    url('../fonts/DINPro-Regular_13937.eot?') format('eot'),
+    url('../fonts/DINPro-Regular.woff') format('woff');
 }
 @font-face {
     font-family: Into;
-    src: local("Into"),
-    url(../fonts/Intro-Regular.otf);
+    src: url(../fonts/Intro-Regular.otf),
+    url('../fonts/Intro-Regular.eot?') format('eot'),
+    url('../fonts/Intro-Regular.woff') format('woff');
 }
 @font-face {
-    font-family: DINPro Bold; /* имя шрифта для CSS правил */
-    src: local("DINPro Bold"), /* проверяем наличие шрифта в ОС пользователя */
-    url(../fonts/DINPROBOLD.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
-}
-@font-face {
-    font-family: Myriad Pro; /* имя шрифта для CSS правил */
-    src: local("Myriad Pro"), /* проверяем наличие шрифта в ОС пользователя */
-    url(../fonts/MyriadPro.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+    font-family: DINPro Bold; 
+    src: url(../fonts/DINPROBOLD.ttf),
+    url('../fonts/DINPROBOLD.eot?') format('eot'),
+    url('../fonts/DINPro-Bold.woff') format('woff');
 }
 
 *{
@@ -339,21 +337,48 @@ ul{
 
 .container-title{
     width: 90%;
-    border-top: 1px solid rgb(211, 211, 211);
+    /*border-top: 1px solid rgb(211, 211, 211);*/
     margin: 0 auto;
     position: relative;
+}
+
+.container-title__label:before{
+	content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 1px;
+    background-color: #d3d3d3;
+    position: absolute;
+	margin-left: -100%;
+    left: -12px;
+	top: 50%;
+}
+
+.container-title__label:after{
+	content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 1px;
+    background-color: #d3d3d3;
+    position: absolute;
+	margin-right: -100%;
+    right: -12px;
+	top: 50%;
 }
 
 .container-title__label{
     font-size: 28px;
     font-family: "DINPro";
     color: black;
-    width: 200px;
+    display: block;
     background: white;
     text-align: center;
     margin: 0 auto;
     position: relative;
     top: -22px;
+    width: 255px;
 }
 
 
@@ -423,9 +448,7 @@ ul{
 }
 
 
-.container-title__label_recomend{
-    width: 255px;
-}
+
 
 .navigator{
     width: 100%;
@@ -659,14 +682,6 @@ ul{
 
 .container-link{
     width: 90%;
-}
-
-.container-title__label_recept{
-    width: 244px;
-}
-
-.container-title__label_company{
-    width: 187px;
 }
 
 .product-slide_recept{

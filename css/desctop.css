@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
     font-family: DINPro;
     src: local("DINPro"),
     url(../fonts/DINPro-Regular_13937.ttf);
@@ -9,14 +9,9 @@
     url(../fonts/Intro-Regular.otf);
 }
 @font-face {
-    font-family: DINPro Bold; /* имя шрифта для CSS правил */
-    src: local("DINPro Bold"), /* проверяем наличие шрифта в ОС пользователя */
-    url(../fonts/DINPROBOLD.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
-}
-@font-face {
-    font-family: Myriad Pro; /* имя шрифта для CSS правил */
-    src: local("Myriad Pro"), /* проверяем наличие шрифта в ОС пользователя */
-    url(../fonts/MyriadPro.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+    font-family: DINPro Bold; 
+    src: local("DINPro Bold"), 
+    url(../fonts/DINPROBOLD.ttf); 
 }
 
 @media (min-width: 1200px) {
@@ -659,8 +654,8 @@
     .container-title__label{
         font-size: 34px;
         color: rgb(0, 0, 0);
-        width: 245px;
         top: -26px;
+        width: 372px;
     }
     .container-title__desc{
         margin-bottom: 30px;
@@ -1049,7 +1044,6 @@
         line-height: 1.2;
         float: left;
         margin-top: 1.2rem;
-        font-family: "Myriad Pro";
     }
     .footer-description{
         background-color: white;
